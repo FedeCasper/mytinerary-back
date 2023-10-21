@@ -1,10 +1,14 @@
 import express from "express";
-import eventRouter from "./eventRouter.js";
+import moviesRouter from "./moviesRouter.js";
 import authRouter from "./authRouter.js"
 
-const router = express.Router()
+const indexRouter = express.Router()
 
-router.use( "/events",  eventRouter )
-router.use( "/auth",  authRouter )
+indexRouter.get("/", (req, res) => {
+     res.send("api myTinerary")
+})
 
-export default router 
+indexRouter.use( "/movies",  moviesRouter )
+indexRouter.use( "/auth",  authRouter )
+
+export default indexRouter 
