@@ -1,4 +1,5 @@
 import { MOVIES } from "../data/data.js"
+import Movie from "../models/Movie.js"
 
 const moviesController = {
      getMovies : ( _, res) => {
